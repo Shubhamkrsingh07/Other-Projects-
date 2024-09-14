@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book My Show</title>
+    <link rel="stylesheet" href="part2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Book My Show</div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search movies...">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="featured-slider">
+            <div class="slider-container">
+                <div class="slider-track">
+                    <!-- Slides will be dynamically added here -->
+                </div>
+                <button class="slider-arrow prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-arrow next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section class="movie-list">
+            <h2>Now Showing</h2>
+            <div class="movie-grid" id="movie-grid">
+                <!-- Movie cards will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="booking-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt="Movie Poster">
+            <p id="modal-price"></p>
+            <label for="seats">Number of seats:</label>
+            <input type="number" id="seats" min="1" value="1">
+            <button id="confirm-booking">Confirm Booking</button>
+        </div>
+    </div>
+
+    <script src="part3.js"></script>
+</body>
+</html>
